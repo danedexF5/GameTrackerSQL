@@ -1,0 +1,17 @@
+<html>
+    <body>
+    <h1>
+        Game Tracker Home
+    </h1>
+    <p><a href="/logout">Logout</a></p>
+
+    <p><a href="/create-game">Create Game</a></p>
+
+        <ol>
+           {{#user.games}}
+              <li>{{name}}</li>
+           {{/user.games}}
+       </ol>
+
+    </body>
+</html>

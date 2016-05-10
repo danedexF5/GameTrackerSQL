@@ -1,0 +1,27 @@
+<html>
+<body>
+<h1>
+    Add a new game
+</h1>
+{{#error}}
+    <div style="color: red">{{error}}</div>
+{{/error}}
+
+<form action="/create-game" method="post">
+    <div><input type="text" name="gameName" placeholder="Game Name" value="{{gameName}}"></div>
+        <div><input type="text" name="gameGenre" placeholder="Game Genre" value="{{gameGenre}}"></div>
+            <div><input type="text" name="gamePlatform" placeholder="Game Platform" value="{{gamePLatform}}"></div>
+                <div><input type="text" name="gameYear" placeholder="Game Year" value="{{gameYear}}"></div>
+                    <button type="submit">Add game</button>
+
+
+</form>
+
+<ol>
+    {{#user.games}}
+        <li>{{name}}</li>
+    {{/user.games}}
+</ol>
+
+</body>
+</html>
